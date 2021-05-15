@@ -1,17 +1,16 @@
 {
-  "name": "angular-jest",
+  "name": "angular-karma",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve --proxy-config proxy.conf.json",
     "build": "ng build",
-    "test": "ng test",
+    "test": "ng test --watch=false",
     "lint": "ng lint",
-    "e2e": "ng e2e",
-    "webdriver": "./node_modules/protractor/bin/webdriver-manager update && ./node_modules/protractor/bin/webdriver-manager start",
+    "webdriver": "node ./node_modules/protractor/bin/webdriver-manager update && node ./node_modules/protractor/bin/webdriver-manager start",
     "protractor": "protractor conf.js",
     "mockserver": "node mockserver.js",
-    "test-protractor": " npm-run-all -p -r -l start webdriver mockserver protractor"
+    "test-protractor": " npm-run-all -p -r -l webdriver mockserver protractor"
   },
   "private": true,
   "dependencies": {
