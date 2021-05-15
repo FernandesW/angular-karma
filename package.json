@@ -10,7 +10,8 @@
     "webdriver": "node ./node_modules/protractor/bin/webdriver-manager update && node ./node_modules/protractor/bin/webdriver-manager start",
     "protractor": "protractor conf.js",
     "mockserver": "node mockserver.js",
-    "test-protractor": " npm-run-all -p -r -l webdriver mockserver protractor"
+    "test-protractor": " npm-run-all -p -r -l webdriver mockserver protractor",
+    "final":"run-s -l start test-protractor"
   },
   "private": true,
   "dependencies": {
