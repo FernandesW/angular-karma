@@ -1,6 +1,7 @@
 var SpecReporter = require('jasmine-spec-reporter').SpecReporter;
 exports.config = {
   allScriptsTimeout: 13000,
+
   directConnect:true,
   specs: [
     './e2e/todo-spec.js'

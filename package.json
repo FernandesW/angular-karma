@@ -7,11 +7,10 @@
     "build": "ng build",
     "test": "ng test --watch=false",
     "lint": "ng lint",
-    "webdriver": "node ./node_modules/protractor/bin/webdriver-manager update && node ./node_modules/protractor/bin/webdriver-manager start",
-    "protractor": "protractor conf.js",
+    "webdriver": "node ./node_modules/protractor/bin/webdriver-manager update && node  ./node_modules/protractor/bin/webdriver-manager start",
+    "protractor": "wait-on tcp:4200 && protractor conf.js",
     "mockserver": "node mockserver.js",
-    "test-protractor": " npm-run-all -p -r -l webdriver mockserver protractor",
-    "final":"run-s -l start test-protractor"
+    "test-protractor": " npm-run-all -p -r -l start webdriver mockserver protractor"
   },
   "private": true,
   "dependencies": {
@@ -28,6 +27,7 @@
     "protractor": "^7.0.0",
     "rxjs": "~6.4.0",
     "tslib": "^1.10.0",
+    "wait-on": "^5.3.0",
     "zone.js": "~0.9.1"
   },
   "devDependencies": {
