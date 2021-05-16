@@ -8,7 +8,7 @@
     "test": "ng test --watch=false",
     "lint": "ng lint",
     "webdriver": "node ./node_modules/protractor/bin/webdriver-manager update && node  ./node_modules/protractor/bin/webdriver-manager start",
-    "protractor": "wait-on tcp:4200 && protractor conf.js",
+    "protractor": "wait-on tcp:4200 && wait-on tcp:4444 && protractor conf.js",
     "mockserver": "node mockserver.js",
     "tp": " npm-run-all -p -r -l start webdriver mockserver protractor"
   },
