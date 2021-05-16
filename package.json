@@ -10,7 +10,7 @@
     "webdriver": "node ./node_modules/protractor/bin/webdriver-manager update && node  ./node_modules/protractor/bin/webdriver-manager start",
     "protractor": "wait-on tcp:4200 && protractor conf.js",
     "mockserver": "node mockserver.js",
-    "test-protractor": " npm-run-all -p -r -l start webdriver mockserver protractor"
+    "tp": " npm-run-all -p -r -l start webdriver mockserver protractor"
   },
   "private": true,
   "dependencies": {
