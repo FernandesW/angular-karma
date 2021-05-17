@@ -8,6 +8,9 @@ exports.config = {
   ],
   capabilities: {
     'browserName': 'firefox',
+    'moz:firefoxOptions': {
+      args: [ "--headless" ]
+    }
   },
 
   baseUrl: 'http://localhost:4200/',
