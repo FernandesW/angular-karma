@@ -8,7 +8,7 @@ describe("angular homepage todo list", function() {
       await element(by.id("xyz"));
       await ngApimock.selectScenario("getStatus", "status OK");
       //var ele=;
-      expect(element(by.id("xyz")).getText()).toEqual("OK");
+      expect(element(by.id("xyz")).getText()).toEqual("pK");
 
     });
 });
