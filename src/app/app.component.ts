@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { HeroService } from "./hero.service";
+import { HeroService } from './hero.service';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -7,10 +7,11 @@ import { HeroService } from "./hero.service";
 })
 export class AppComponent {
   title = 'angular-karma';
-  mydata={};
+  mydata = {};
   constructor(
     private heroService: HeroService
   ) {}
+  // tslint:disable-next-line: use-lifecycle-interface
   ngOnInit() {
     this.heroService.getEmployee().subscribe(data => {
       console.log(data);
