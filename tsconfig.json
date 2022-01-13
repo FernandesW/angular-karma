@@ -14,6 +14,10 @@
     "typeRoots": [
       "node_modules/@types"
     ],
+    "types": [
+      "jasmine",
+      "core-js"
+    ],
     "lib": [
       "es2018",
       "dom"

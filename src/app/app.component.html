@@ -10,7 +10,11 @@
 <style>
  
 </style>
-<div id="xyz" *ngIf="mydata[0]?.message">
+<div id="xyz"  *ngIf="mydata[0]?.message">
 {{mydata[0].message}}
+    <div class="content">
+        angular-jest app is running!
+    </div>
 </div>
+
 <router-outlet></router-outlet>
