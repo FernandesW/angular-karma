@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { HeroService } from './hero.service'
+
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -14,9 +14,7 @@ import { AppComponent } from './app.component';
     AppRoutingModule,
     HttpClientModule,
   ],
-  providers: [
-    HeroService
-  ],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
